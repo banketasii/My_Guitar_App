@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+
+<div class='ui main text container segment'>
+  <div class='ui huge header'>New Guitar</div>
+  <form class='ui form' action='/guitars' method='POST'>
+    <div class='field'>
+      <label>Title</label>
+      <input type='text' name='guitar[title]' placeholder='title'>
+    </div> <!-- Closes field -->
+    
+    <div class='field'>
+      <label>Image URL</label>
+      <input type='text' name='guitar[image]' placeholder='image url'>
+    </div> <!-- Closes field -->
+    
+    <div class='field'>
+      <label>Guitar Description</label>
+      <textarea name='guitar[body]'></textarea>
+    </div> <!-- Closes field -->
+    
+    <input class='ui yellow basic button' type='submit'>
+  </form>  
+</div> <!-- Closes ui main text container segment -->
+
+<% include ./partials/footer %>

@@ -1,0 +1,17 @@
+<% include ./partials/header %>
+
+<div class='ui main container'>
+  <h1>Guitar app index page</h1>
+
+  <% for(let i = 0; i < guitars.length; i++){%>
+    <div class='ui segment'>
+      <h2><%= guitars[i]['title'] %></h2>
+      <img class='ui image' src="<%= guitars[i]['image'] %>">
+      <p><%= guitars[i]['body'].substring(0, 100) %>...</p>
+      <a href="/guitars/<%= guitars[i]['_id'] %>">Read More</a>
+      <span><%= guitars[i]['created'].toDateString() %></span>
+    </div>
+  <% } %>
+</div>
+
+<% include ./partials/footer %>

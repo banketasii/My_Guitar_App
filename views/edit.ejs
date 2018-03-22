@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+
+<div class='ui main text container segment'>
+  <div class='ui huge header'>Edit <%= guitar['title'] %></div>
+  <form class='ui form' action='/guitars/<%= guitar["_id"] %>?_method=PUT' method='POST'>
+    <div class='field'>
+      <label>Title</label>
+      <input type='text' name='guitar[title]' value='<%= guitar["title"] %>'>
+    </div> <!-- Closes field -->
+    
+    <div class='field'>
+      <label>Image URL</label>
+      <input type='text' name='guitar[image]' value='<%= guitar["image"] %>'>
+    </div> <!-- Closes field -->
+    
+    <div class='field'>
+      <label>Guitar Description</label>
+      <textarea name='guitar[body]'><%= guitar["body"] %></textarea>
+    </div> <!-- Closes field -->
+    
+    <input class='ui yellow basic button' type='submit'>
+  </form>  
+</div> <!-- Closes ui main text container segment -->
+
+<% include ./partials/footer %>
